@@ -4,6 +4,9 @@ import logging
 from finder.filesystem import FilesystemFinder
 from processor import PhotoProcessor
 
+logging.basicConfig()
+logging.getLogger().setLevel(logging.DEBUG)
+
 parser = argparse.ArgumentParser()
 parser.add_argument("source")
 parser.add_argument("destination")
