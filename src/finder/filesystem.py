@@ -8,7 +8,7 @@ from interfaces.logging import LoggingProtocol
 
 class FilesystemFinder(Finder):
     """ Finds files on disk and stores metadata in json files """
-    def __init__(self, source: str, destination:str, logger: LoggingProtocol):
+    def __init__(self, source: str, destination: str, logger: LoggingProtocol):
         self.source = Path(source)
         self.destination = Path(destination)
         self.metadata: List[Photo] = []
