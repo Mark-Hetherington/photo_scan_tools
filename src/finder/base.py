@@ -33,16 +33,21 @@ class Finder(ABC):
         pass
 
     @abstractmethod
-    def group_photos(self, left: Photo, right: Photo):
+    def group_photos(self, left: Photo, right: Photo) -> None:
         """ Associate two photos - these are often the front and back of a postcard or multiple pages """
         pass
 
     @abstractmethod
-    def set_photo_title(self, photo: Photo, title: str):
+    def set_photo_title(self, photo: Photo, title: str) -> None:
         """ Set a photo title """
         pass
 
     @abstractmethod
-    def save_processed_image(self, photo: Photo, data: bytes):
+    def save_processed_image(self, photo: Photo, data: bytes) -> None:
+        """ Save the processed image """
+        pass
+
+    @abstractmethod
+    def get_photo_by_location(self, location: str) -> Optional[Photo]:
         """ Save the processed image """
         pass

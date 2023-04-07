@@ -1,14 +1,10 @@
 from abc import ABC, abstractmethod
 
-from finder.base import Photo
+from finder.base import Photo, Finder
 
 
 class PhotoHandler(ABC):
     @abstractmethod
-    def can_process(self, photo: Photo):
-        pass
-
-    @abstractmethod
-    def process(self, photo: Photo):
+    def process(self, photo: Photo, finder: Finder):
         pass
 
